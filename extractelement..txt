@@ -1,0 +1,29 @@
+driver.get("https://www.amazon.in/")	Amazon Open karta hai	Jahan se data scrape karna hai
+
+driver.find_element(By.ID, "twotabsearchtextbox")	Amazon ka search box dhundta hai	Search karne ke liye
+
+search_box.send_keys("Laptop")	"Laptop" likh kar enter dabata hai	Products ki list lane ke liye
+
+driver.find_elements(By.XPATH, "//div[@data-component-type='s-search-result']")	Amazon ke sabhi products dhundta hai	Multiple products extract karne ke liye
+
+product.find_element(By.XPATH, ".//span[@class='a-size-medium a-color-base a-text-normal']").text	Product ka naam extract karta hai	Product ka title nikalne ke liye
+
+product.find_element(By.XPATH, ".//span[@class='a-price-whole']").text	Product ka price extract karta hai	Price dikhane ke liye
+
+product.find_element(By.XPATH, ".//span[@class='a-icon-alt']").text	Product ka rating extract karta hai	Customer rating ke liye
+
+
+#advanced cocept:-
+Advanced Concepts (Future Enhancements)
+Headless Mode: Browser background me chalayenge taaki screen pe dikhe na.
+Data Store: Extracted data ko CSV ya Database me store karenge.
+Proxy & User-Agent Rotation: Amazon bot detection se bachne ke liye proxy aur headers use karenge.
+
+
+
+#note:-
+Amazon pe product search karke unke naam, price, aur rating scrape kiye.
+Selenium aur WebDriver ka use kiya Amazon automate karne ke liye.
+XPATH ka use karke webpage se elements extract kiye.
+Multiple products ke data extract karne ke liye loop ka use kiya.
+Error handling ka bhi dhyan rakha (try-except) taaki agar koi cheez na mile to code na toote.

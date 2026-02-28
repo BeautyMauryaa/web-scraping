@@ -1,0 +1,26 @@
+selenium.webdriver: Used to automate browser actions.
+webdriver.chrome.service.Service: Manages ChromeDriver execution.
+webdriver_manager.chrome.ChromeDriverManager: Automatically installs and updates
+
+
+ChromeDriverManager().install() → Automatically downloads the correct version of ChromeDriver.
+Service() → Creates a ChromeDriver service.
+webdriver.Chrome(service=service) → Launches Google Chrome in automation mode.
+
+driver.get(url) → Opens the given URL in Chrome.
+Example: "https://www.amazon.in/dp/B0BDK62PDX" is an Amazon product page.
+
+
+driver.page_source → Fetches the entire HTML structure of the currently loaded page.
+It includes:
+Head, body, scripts, styles
+Dynamically loaded content (excluding AJAX-loaded parts)
+
+
+"extracted_html.html" → Creates a new file to store the extracted HTML.
+w mode → Writes the extracted content into the file (overwrites if already exists).
+encoding="utf-8" → Ensures special characters (like Hindi/Unicode) are stored correctly.
+
+
+driver.quit() → Closes the browser to free system resources.
+Always close the driver to avoid memory leaks.
